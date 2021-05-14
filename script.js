@@ -14,6 +14,11 @@ var blocks = [
 document.getElementById("h1_id").innerHTML = "Tics Tac Toe";
 document.getElementById("now_turn").innerHTML = symbols[0];
 
+/**
+ * Change state of the game
+ *
+ * @param {string} id id of button tag
+ */
 function onCellClick(id) {
   console.log("id", id);
   var is_data_exist = document.getElementById(id).innerText;
@@ -29,6 +34,9 @@ function onCellClick(id) {
   document.getElementById("now_turn").innerHTML = symbols[nextTurn];
 }
 
+/**
+ * Reset the game
+ */
 function clearGame() {
   for (i = 0; i < blocks.length; i++) {
     document.getElementById(blocks[i]).innerText = "";
