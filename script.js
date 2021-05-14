@@ -33,9 +33,7 @@ function onCellClick(id) {
     nextTurn = 0;
   }
   /**
-   *  TODO: Check state of the game
-   *         - game is completed or not
-   *         - if completed then who is the winner
+   *  TODO: Check winner of the game
    */
   document.getElementById("now_turn").innerHTML = symbols[nextTurn];
 }
@@ -45,7 +43,13 @@ function onCellClick(id) {
  *
  * @returns {boolean} true if game is completed else false
  */
-function checkStateOfGame() {}
+function checkWinnerOfGame() {
+  // 1: There is atlist 3 cell selected || return false
+  // 2: Match the cells of row. matched && return true.
+  // 3: Match the cells of collumn. matched && return true.
+  // 4: Match the cells of diagonal. matched && return true.
+  // 5: return false
+}
 
 /**
  * Reset the game
